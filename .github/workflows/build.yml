@@ -27,6 +27,7 @@ jobs:
       - name: Gradle build
         run: ./gradlew build
       - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
         if: ${{ matrix.os == 'ubuntu-latest' }} # add conditional execution
         with:
           path: |
